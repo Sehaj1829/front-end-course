@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>CSS Transform</title>
+    <style>
+        body
+        {
+            background-color: black;
+        }
+        .box
+        {
+            height: 70px;
+            width: 70px;
+            color: whitesmoke;
+            border: 2px solid indianred;
+            border-radius: 5px;
+            background-color: grey;
+            position: relative;
+            top: 50px;
+            left: 50px;
+            align-content: center;
+            text-align: center;
+            
+            transition: all 2s ease-in;
+        }
+        .box:hover
+        {
+            transform: skew(90deg);
+            /* transform: scale(10); */
+            /* transform: translate(50px,50px); */
+            /* transform: rotatex(45deg);
+            transform: rotatey(45deg);
+            transform: rotatez(45deg); */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Rotate</div>
+</body>
+</html>

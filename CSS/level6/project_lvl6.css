@@ -1,0 +1,37 @@
+        body 
+        {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+        #head 
+        {
+            color: whitesmoke;
+            text-align: center;
+            margin: 20px 0;
+        }
+        #navb i, #navb span 
+        {
+            font-size: 20px;   /* make all icons equal */
+            margin: 40px;     
+            color: black;      /* icon color inside white bar */           
+        }
+        #first 
+        {
+            height: 50px;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        footer 
+        {
+            color: rgb(218, 11, 11);
+            background-color: whitesmoke;
+            position: fixed;
+            bottom: 0px;
+            width: 100%;          /* span across the bottom */
+            text-align: center;   /* centers the text */
+            padding: 5px 0;      /* optional spacing */
+        }

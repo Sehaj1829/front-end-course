@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <title>Animation in CSS</title>
+    <style>
+        body
+        {
+            background-color: black;
+        }
+        .box
+        {
+            height: 70px;
+            width: 70px;
+            color: black;
+            border: 2px solid blue;
+            border-radius: 5px;
+            background-color: whitesmoke;
+            position: relative;
+            top: 10px;
+            left: 10px;
+            align-content: center;
+            text-align: center;
+            
+            /* animation-name: first;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1 s;
+
+            animation-iteration-count: infinite; 
+            animation-direction: alternate;             */
+
+            animation: first 2s ease-in-out 1s infinite alternate ;
+        }
+        @keyframes first
+        {
+            /* from{left:10px}
+            to {left: 250px} */
+
+            0% {left:10px}
+            50% {left: 125px}
+            100% {left: 250px}
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Animation</div>
+</body>
+</html>

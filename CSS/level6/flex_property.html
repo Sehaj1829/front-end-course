@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <title>Flex Property</title>
+    <style>
+        body
+        {
+            background-color: #000;
+        }
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        .box
+        {
+            width: 75px;
+            height: 75px;
+            margin: 5px;
+            border: 3px solid black;
+        }
+        #heading
+        {
+            color: whitesmoke;
+            text-align: center;
+        } 
+        #container
+        {
+            height: 600px;
+            width: 600px;
+            padding: 10px;
+            margin: 20px;
+            border: 3px solid orangered;
+            background-color: skyblue;
+
+            display: flex;
+            justify-content: space-between;
+        }
+        #box1 { background-color: indigo; }
+        #box2 { background-color: blue; } 
+        #box3 { background-color: beige; }
+        #box4 { background-color: chartreuse; }
+    </style>
+</head>
+
+<body>
+    <h1 id="heading">Flex Container</h1>
+
+    <div id="container">
+        <div id="box1" class="box">Flex item 1</div>
+        <div id="box2" class="box">Flex item 2</div>
+        <div id="box3" class="box">Flex item 3</div>
+        <div id="box4" class="box">Flex item 4</div>
+    </div>
+</body>
+</html>

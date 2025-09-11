@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>Flex Property</title>
+    <style>
+        body
+        {
+            background-color: #000;
+        }
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        .box
+        {
+            width: 75px;
+            height: 75px;
+            margin: 5px;
+            border: 3px solid black;
+        }
+        #heading
+        {
+            color: whitesmoke;
+            text-align: center;
+        } 
+        #container
+        {
+            height: 600px;
+            width: 600px;
+            padding: 10px;
+            margin: 20px;
+            border: 3px solid orangered;
+            background-color: skyblue;
+
+            display: grid;
+            grid-template-columns: 80px 100px;
+            grid-template-rows: 50px 100px;
+            justify-content: center;
+            align-content: center;
+        }
+        #box1 { background-color: indigo; grid-row: 1/2; grid-column: 1/2;}
+        #box2 { background-color: blue; grid-row: 1/2; grid-column: 2/2;} 
+        #box3 { background-color: beige; grid-row: 2/2; grid-column: 1/2;}
+        #box4 { background-color: chartreuse; grid-row: 2/2; grid-column: 2/2;}
+    </style>
+</head>
+
+<body>
+    <h1 id="heading">Grid Container</h1>
+
+    <div id="container">
+        <div id="box1" class="box">Flex item 1</div>
+        <div id="box2" class="box">Flex item 2</div>
+        <div id="box3" class="box">Flex item 3</div>
+        <div id="box4" class="box">Flex item 4</div>
+    </div>
+</body>
+</html>

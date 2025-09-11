@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+    <title>Project Level 5</title>
+    <script src="https://kit.fontawesome.com/d823d4a767.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            /* color: white; */
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+        #head 
+        {
+            color: whitesmoke;
+            text-align: center;
+            margin: 20px 0;
+        }
+        #navb i, #navb span {
+            font-size: 20px;   /* make all icons equal */
+            margin: 0 40px;    /* spacing between icons */
+            display: inline-block;
+            color: black;      /* icon color inside white bar */
+        }
+        #first 
+        {
+            height: 50px;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #second {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+        .two
+        {
+            height: 100px;
+            width: 100px;
+            background-color: beige;
+            color: black;
+            display: inline-block;
+            text-align: center;
+            margin: 5px;
+        }
+        #container
+        {
+            border: 3px solid white;
+            margin: 5px;
+        }
+        /* #fourth
+        {
+            z-index: 2;
+            position: absolute;
+            left: 20px;
+        } */
+        #six
+        {
+            background-color: beige;
+            color: black;
+            position: fixed;
+            right: 10px;
+        }
+        footer 
+        {
+            color: rgb(218, 11, 11);
+            background-color: whitesmoke;
+            position: fixed;
+            bottom: 0px;
+            width: 100%;          /* span across the bottom */
+            text-align: center;   /* centers the text */
+            padding: 5px 0;      /* optional spacing */
+        }
+    </style>
+</head>
+<body>
+    <h1 id="head"><i class="fa-brands fa-google fa-bounce"></i>oogle Services at One Stop</h1>
+
+    <div id="first">
+        <nav id="navb">
+            <a href="https://www.google.com" target="_blank"><i class="fa-brands fa-google"></i></a> |
+            <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a> |
+            <a href="https://mail.google.com" target="_blank"><i class="fa-solid fa-inbox"></i></a> |
+            <a href="https://drive.google.com" target="_blank"><i class="fa-brands fa-google-drive"></i></a> |
+            <a href="https://docs.google.com" target="_blank"><i class="fa-solid fa-file"></i></a> |
+            <a href="https://maps.google.com" target="_blank"><i class="fa-solid fa-location-dot"></i></a>
+        </nav>
+    </div><br>
+        
+    <main>
+        <div id="second">Div2</div><br>
+        <div id="container">
+            <div id="third" class="two">News </div>
+            <div id="fourth" class="two">Docs </div>
+            <div id="fifth" class="two">Maps</div>
+        </div>
+
+        <div id="six" class = "two">Box 4</div>
+    </main><br>
+    <footer ><i>Powered by Google Services </i></footer>
+</body>
+</html>
+
+
+
+

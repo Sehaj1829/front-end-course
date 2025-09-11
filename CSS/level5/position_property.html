@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding:0;
+        }
+        .box
+        {
+            height: 50px;
+            width: 50px;
+            margin: 5px;
+            text-align: center;
+            background-color: red;
+        }
+        #box1
+        {
+            position: static;
+            background-color: red;
+        }
+        #box2
+        {
+            position: relative;
+            top: 10px;
+            left: 50px;
+            background-color: green;
+        }
+        #box3
+        {
+            position: absolute;
+            top: 20px;
+            background-color: magenta;
+        }
+        #box4
+        {
+            position: fixed;
+            right: 50px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1" class="box">Box 1</div>
+    <div id="box2" class="box">Box 2</div>
+    <div id="box3" class="box">Box 3</div>
+    <div id="box4" class="box">Box 4</div>
+    <div class="box">Box</div>
+    <div class="box">Box</div>
+    <div class="box">Box</div>
+    <div class="box">Box</div>
+    <div class="box">Box</div>
+    <div class="box">Box</div>
+</body>
+</html>
