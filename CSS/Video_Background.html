@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Background with Sound</title>
+  <style>
+    /* Make video cover the whole screen */
+    #bg-video 
+    {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1; /* Keep it behind everything */
+    }
+
+    /* Content styling */
+    .content 
+    {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 20%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background video -->
+  <video autoplay loop id="bg-video" controls>
+    <source src="McQueen.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+</body>
+</html>
