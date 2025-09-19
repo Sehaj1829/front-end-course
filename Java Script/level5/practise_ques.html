@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <script>
+        function oddEven(a)
+        {
+            if(a % 2 == 0)
+            {
+                console.log(`${a} is Even number`);
+            }
+            else if(a%2==1)
+            {
+                console.log(`${a} is Odd Number`);
+            }
+        }
+        // oddEven(4);
+        // oddEven(5);
+
+        function largerNum(a,b)
+        {
+            if(a > b)
+            {
+                console.log(`${a} is greater than ${b}`);
+            }
+            else if(a == b)
+            {
+                console.log(`${a} and ${b} are equal numbers`);
+            }
+            else 
+            {
+                console.log(`${b} is greater than ${a}`);
+            }
+        }
+        // largerNum(4,5);
+        // largerNum(10,10);
+        // largerNum(11,8);
+
+        function celciusToFahrenheit(C)
+        {
+            let f = ((9/5)* C + 32);
+            return f;
+        }
+
+        celciusToFahrenheit(32);
+    </script>
+</body>
+</html>
