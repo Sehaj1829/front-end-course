@@ -45,6 +45,11 @@
             wins: 0,
             lost: 0,
             tie: 0,
+
+            displayScore: function()
+            {
+                return `No. of matches Won: ${score.wins}, Lost: ${score.lost}, Tie: ${score.tie}`   
+            }
         };
         function generateComputeChoice()
         {
@@ -126,7 +131,8 @@
         {
             alert(`\nYou have chosen ${userMove}. Computer's Choice is ${computerChoice}. and 
             \n${resultMsg}
-            \nWon: ${score.wins}, Lost: ${score.lost}, Tie: ${score.tie}`);
+            
+            ${score.displayScore()}`);
         }
     </script>
 </body>
