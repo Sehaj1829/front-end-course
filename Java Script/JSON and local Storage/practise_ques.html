@@ -1,11 +1,94 @@
 <!DOCTYPE html>
 <head>
     <title>Practise</title>
+    <style>
+        #greeting
+        {
+            text-align: center;
+        }
+        #my-button
+        {
+            height: 50px;
+            width: 50px;
+            font-size: 25px;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .odd
+        {
+            background-color: chocolate;
+        }
+        .even
+        {
+            background-color: lawngreen;
+        }
+    </style>
 </head>
 <body>
-    
+    <h3 id = "greeting"></h3>
+
+    <button id="my-button" onclick="buttonPressed();"
+    >0</button>
+
+
     <script>
+        let noOfTimesClicked = localStorage.getItem('noOfTimesClicked') || 0;
         
+
+        function buttonPressed()
+        {
+            noOfTimesClicked++;
+            localStorage.setItem('noOfTimesClicked',noOfTimesClicked);
+            updateButton();
+        }
+
+        function updateButton()
+        {
+            let button = document.querySelector("#my-button");
+            
+            if(noOfTimesClicked % 2 == 0)
+            {
+                button.classList.remove('odd');
+                button.classList.add('even');
+            }
+            else
+            {
+                button.classList.remove('even');
+                button.classList.add('odd');
+            }
+            button.innerText = noOfTimesClicked;
+        }
+        updateButton();
+
+
+
+
+
+
+        function doGreeting(personName = 'Sehaj')
+        {
+            let myDate = new Date();
+            let hours = myDate.getHours();
+            
+            if(hours >= 5 && hours < 12)
+            {
+                document.querySelector("#greeting").innerText = `Good Morning ${personName}`;
+            }
+            else if(myDate.getHours() <= 16)
+            {
+                document.querySelector("#greeting").innerText = `Good Afternoon ${personName}`; 
+            }
+            else if(myDate.getHours() <= 19)
+            {
+                document.querySelector("#greeting").innerText = `Good Evening ${personName}`;
+            }
+            else
+            {
+                document.querySelector("#greeting").innerText = `Good Night ${personName}`;
+            }
+        }
+        doGreeting('Sehaj')
     </script>
 </body>
 </html>
