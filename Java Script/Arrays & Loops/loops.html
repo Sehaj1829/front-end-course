@@ -1,10 +1,67 @@
 <!DOCTYPE html>
 <head>
-    <title></title>
+    <title>Loops</title>
+    <style>
+        body
+        {
+            background-color: black;
+        }
+    </style>
 </head>
 <body>
     <script>
-        
+        // **** While Loop ****
+
+        // let num = 1;
+        // while(num <= 10)
+        // {
+        //     console.log(num);
+        //     num++;
+        // }
+        // console.log('final value of num is '+ num);
+
+        // let x = 0;
+        // while(x < 1)
+        // {
+        //     console.log(x);
+        //     x = Math.random() * 2;
+        // }
+
+
+
+        // **** Do-While Loop ****
+
+        // let num = 0;
+        // do 
+        // {
+        //     console.log(num);
+        //     num++;
+        // }
+        // while (false);
+
+
+
+        // **** For Loop ****
+
+        // for (let num = 1; num <= 10; num++)
+        // {
+        //     console.log(num);
+        // }
+
+        let nums = [4,56,8,3,-87,9,78]; 
+        let sum = 0;
+        for(let i = 0; i < nums.length; i++)
+        {
+            sum += nums[i];
+        }
+        console.log(sum);
+
+        let squares = [];
+        for(let i = 0; i < nums.length; i++)
+        {
+            squares.push(nums[i] * nums[i]);
+        }
+        console.log(squares);
     </script>
 </body>
 </html>
