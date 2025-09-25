@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+    <title>Practise Exercise</title>
+    <style>
+        body
+        {
+            background-color: black;
+            color: beige;
+        }
+        #heading
+        {
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .buttonn
+        {
+            height: 20px;
+            width: 80px;
+            background-color: beige;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+        }
+        .js-size-double
+        {
+            height: 40px;
+            width: 160px;
+            background-color: beige;
+            border: none;
+            border-radius: 4px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Practise Exercise</h1>
+     <button class = "buttonn">Click Me</button> 
+
+
+    <script>
+        // 1
+        let multiply = function(num1, num2)
+        {
+            return num1 * num2;
+        };
+
+        console.log(multiply(4,3));
+
+        // 2
+        let printGreeting = () => console.log('Namaste');
+        let runTwice = inputFunction => 
+        {
+            inputFunction();
+            inputFunction();
+        }
+        runTwice(printGreeting);
+
+        // 3, 4
+        let buttonElement = document.querySelector('.buttonn');
+        buttonElement.addEventListener('click', event => setTimeout(doubleSize, 2000));
+        function doubleSize()
+        {
+            let buttonElement = document.querySelector('.buttonn');
+            buttonElement.classList.add('js-size-double');
+        }
+        
+        // 5
+        function sumArray(arr)
+        {
+            let sum = 0;
+            arr.forEach(element => sum += element);
+            console.log(sum);
+        };
+
+        arr = [10,20,30,40];
+        sumArray(arr);
+
+        // 6
+        arr = [10,20,30,40];
+        let squares = arr.map((num) => num * num);
+        console.log(squares);
+    </script>
+</body>
+</html>
