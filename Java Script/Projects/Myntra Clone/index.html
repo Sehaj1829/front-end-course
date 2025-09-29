@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>Myntra Clone Project</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <link rel="stylesheet" href="myntra_clone.css">
+    <link rel="stylesheet" href="CSS/index.css">
 </head>
 <body>
     <header>
-        <div class="logo_container">
+         <div class="logo_container">
             <a href="#"><img class="myntra_home" src="images/myntra_logo.webp" alt="Myntra Home"></a>    
         </div>
 
@@ -35,49 +36,20 @@
                 <span class="action_name">Shopping</span>
             </div>
 
-            <div class="action_container">
+            <!--  -->
+            <a class="action_container" href="pages/bag.html">
                 <span class="material-symbols-outlined action_icon">shopping_bag</span>
                 <span class="action_name">Bag</span>
+                <span class="bag-item-count">0</span>
             </div>
         </div>
 
     </header>
 
     <main>
-        <div class="banner_container">
-            <img class="banner_image" src="images/banner2.jpeg" alt="Main Banner">
+        <div class="items-container">
+            
         </div>
-
-        <div class="category_heading">MEDAL WORTHY BRANDS TO BAG</div>
-        <div class="category_items">
-            <a href="#"><img class="sale_item" src="images/Offers/1.png"></a>
-            <a href="#"><img class="sale_item" src="images/Offers/2.png"></a>
-            <a href="#"><img class="sale_item" src="images/Offers/3.png"></a>
-            <a href="#"><img class="sale_item" src="images/Offers/4.png"></a>
-            <a href="#"><img class="sale_item" src="images/Offers/5.png"></a>
-            <a href="#"><img class="sale_item" src="images/Offers/6.png"></a>
-            <a href="#"><img class="sale_item" src="images/Offers/7.png"></a>
-            <a href="#"><img class="sale_item" src="images/Offers/8.png"></a>
-            <a href="#"><img class="sale_item" src="images/Offers/9.png"></a>
-            <a href="#"><img class="sale_item" src="images/Offers/10.png"></a>
-            <a href="#"><img class="sale_item" src="images/Offers/11.png"></a>
-            <a href="#"><img class="sale_item" src="images/Offers/12.png"></a>
-        </div>
-
-        <div class="category_heading">SHOP BY CATEGORY</div>
-        <div class="category_items">
-            <a href="#"><img class="sale_item" src="images/Categories/1.jpg"></a>
-            <a href="#"><img class="sale_item" src="images/Categories/2.jpg"></a>
-            <a href="#"><img class="sale_item" src="images/Categories/3.jpg"></a>
-            <a href="#"><img class="sale_item" src="images/Categories/4.jpg"></a>
-            <a href="#"><img class="sale_item" src="images/Categories/5.jpg"></a>
-            <a href="#"><img class="sale_item" src="images/Categories/6.jpg"></a>
-            <a href="#"><img class="sale_item" src="images/Categories/7.jpg"></a>
-            <a href="#"><img class="sale_item" src="images/Categories/8.jpg"></a>
-            <a href="#"><img class="sale_item" src="images/Categories/9.jpg"></a>
-            <a href="#"><img class="sale_item" src="images/Categories/10.jpg"></a>
-        </div>
-
     </main>
 
     <footer>
@@ -145,5 +117,7 @@
     </div>
 </footer>
 
+<script src="data/items.js"></script>
+<script src="scripts/index.js"></script>
 </body>
 </html>
