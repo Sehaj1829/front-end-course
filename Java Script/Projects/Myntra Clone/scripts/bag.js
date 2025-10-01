@@ -4,9 +4,9 @@ onLoad();
 
 function onLoad() 
 {
-    loadBagItemObjects();
-    displayBagItems();
-    displayBagSummary();
+  loadBagItemObjects();
+  displayBagItems();
+  displayBagSummary();
 }
 
 function displayBagSummary()
@@ -74,7 +74,7 @@ function displayBagItems()
     let innerHTML = '';
     bagItemObjects.forEach(bagItem => 
     {
-        innerHTML += generateItemHTML(bagItem);
+      innerHTML += generateItemHTML(bagItem);
     });
     containerElement.innerHTML = innerHTML;
 }
