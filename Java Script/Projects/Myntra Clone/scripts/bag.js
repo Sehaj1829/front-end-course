@@ -17,12 +17,19 @@ function displayBagSummary()
     let totalDiscount = 0;
 
     bagItemObjects.forEach(bagItem => 
-        {
-        totalMRP += bagItem.original_price;
-        totalDiscount += bagItem.original_price - bagItem.current_price;
+    {
+      totalMRP += bagItem.original_price;
+      totalDiscount += bagItem.original_price - bagItem.current_price;
     });
-
-    let finalPayment = totalMRP - totalDiscount + CONVENIENCE_FEES;
+    let finalPayment = 0;
+    if(totalMRP == 0)
+    {
+      finalPayment = 0;
+    }
+    else
+    {
+      finalPayment = totalMRP - totalDiscount + CONVENIENCE_FEES;
+    }
     
 
     bagSummaryElement.innerHTML = `
