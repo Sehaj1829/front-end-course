@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<head>
+    <title>Cricket Game</title>
+    <link rel="stylesheet" href="cricket.css">
+</head>
+<body>
+    <h1>Bat Ball Stump Game</h1>
+
+    <button class="choice-button" onclick = 
+    " 
+        let computerChoice = generateComputeChoice();
+        let resultMsg = getResult('Bat', computerChoice);
+        showResult('Bat',computerChoice, resultMsg);
+    "> 
+        <img src="Images/bat.png" alt="Bat Image" class="choice-image">
+    </button>
+    
+    <button class="choice-button" onclick = 
+    "
+        computerChoice = generateComputeChoice();
+        resultMsg = getResult('Ball', computerChoice);
+        showResult('Ball',computerChoice, resultMsg);
+    "> 
+        <img src="Images/ball.png" alt="Ball Image" class="choice-image">
+    </button>
+
+    <button class="choice-button" onclick = 
+    "
+        computerChoice = generateComputeChoice();
+        resultMsg = getResult('Stumps', computerChoice);
+        showResult('Stumps',computerChoice, resultMsg);
+    "> 
+        <img src="Images/stump.png" alt="Bat Image" class="choice-image">
+    </button>
+    <br>
+    
+
+    <h3 id="user-move"></h3>
+    <h3 id="computer-move"></h3>
+    <h3 id="Result"></h3>
+    <h3 id="score"></h3>
+
+    <button class="choice-button" onclick = "localStorage.clear()
+        resetScore();
+    ">Reset</button>
+    
+    <script>
+        let scoreStr = localStorage.getItem('Score');
+        let score;
+        resetScore(scoreStr);
+
+        function resetScore(scoreStr)
+        {
+            score = scoreStr ? JSON.parse(scoreStr) : {
+                wins: 0,
+                lost: 0,
+                tie: 0,
+            };
+
+            score.displayScore = function()
+            {
+                return `Score: Won: ${score.wins}, Lost: ${score.lost}, Tie: ${score.tie}`;   
+            };
+
+            showResult();
+        }
+        
+        function generateComputeChoice()
+        {
+            // This will generate random number between 0 and 3
+            let randomNumber = Math.random() * 3;
+            if (randomNumber > 0 && randomNumber <= 1) 
+            {
+                // computerChoice = 'Bat';
+                return 'Bat';
+            }
+            else if (randomNumber > 1 && randomNumber <= 2 )
+            {
+                return 'Ball';
+            }
+            else
+            {
+                return 'Stumps';
+            }
+        }
+        function getResult(userMove, computerChoice)
+        {
+            if (userMove === 'Bat')
+            {   
+                if (computerChoice === 'Ball')
+                {
+                    score.wins++;
+                    return 'User Won.';
+                }
+                else if (computerChoice === 'Bat')
+                {
+                    score.tie++;
+                    return `It's a tie`;
+                }
+                else if(computerChoice === 'Stumps')
+                {
+                    score.lost++;
+                    return 'Computer has won.';
+                }
+            }
+            else if (userMove === 'Ball')
+            {
+                if (computerChoice === 'Ball')
+                {
+                    score.tie++;
+                    return `It's a tie`;
+                }
+                else if (computerChoice === 'Bat')
+                {
+                    score.lost++;
+                    return 'Computer has won.';
+                }
+                else if(computerChoice === 'Stumps')
+                {
+                    score.wins++;
+                    return 'User Won.';
+                }
+            }
+            else
+            {
+                if (computerChoice === 'Ball')
+                {
+                    score.lost++;
+                    return 'Computer has won.';
+                }
+                else if (computerChoice === 'Bat')
+                {
+                    score.wins++;
+                    return 'User Won.';
+                }
+                else if(computerChoice === 'Stumps')
+                {
+                    score.tie++;
+                    return `It's a tie` ;
+                }
+            }
+        }
+
+        function showResult(userMove, computerChoice, resultMsg)
+        {
+            localStorage.setItem('score', JSON.stringify(score));
+
+            document.querySelector('#user-move').innerText = 
+                userMove ? `You have chosen ${userMove}.`: '';
+
+            document.querySelector('#computer-move').innerText = 
+                computerChoice ? `Computer's Choice is ${computerChoice}.`: '';
+
+            document.querySelector('#Result').innerText = resultMsg || '';
+
+            document.querySelector('#score').innerText = score.displayScore();
+        }
+    </script>
+</body>
+</html>
