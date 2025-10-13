@@ -1,4 +1,23 @@
-/* -------------------- GLOBAL -------------------- */
+/* ---------- THEME VARIABLES ---------- */
+:root 
+{
+  --primary-color: #080808;          /* background */
+  --secondary-color: #ffffff;        /* text */
+  --card-bg: #262626;                /* cards (dark mode) */
+  --accent-color: #ff004f;           /* accent pink */
+  --layer-bg: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+}
+
+.light-theme 
+{
+  --primary-color: #edf2fc;          /* light background */
+  --secondary-color: #212121;        /* text */
+  --card-bg: #ffffff;                /* white cards */
+  --accent-color: #ff004f;
+  --layer-bg: linear-gradient(rgba(255,255,255,0.7), #ff004f);
+}
+
+/* ---------- GLOBAL ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -6,32 +25,38 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #080808;
-  color: #fff;
+html {
+  scroll-behavior: smooth;
 }
 
-/* -------------------- HEADER -------------------- */
+body {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  transition: background 0.5s, color 0.5s;
+}
+
+/* ---------- NAVBAR ---------- */
 #header {
   width: 100%;
   height: 100vh;
-  background-image: url(images/Untitled\ design.png);
-  background-position: center;
-  background-size: cover;
+  background: var(--primary-color);
+  position: relative;
+  transition: background 0.5s;
 }
 
 .container {
   padding: 10px 10%;
 }
 
-nav {
+nav 
+{
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.logo {
+#logo {
   width: 140px;
 }
 
@@ -43,26 +68,26 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #fff;
+  color: var(--secondary-color);
   font-size: 18px;
   position: relative;
+  transition: color 0.3s;
 }
 
-nav ul li a::after {
-  content: '';
-  width: 0;
-  height: 3px;
-  background: #ff004f;
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  transition: 0.5s;
+nav ul li a:hover {
+  color: var(--accent-color);
 }
 
-nav ul li a:hover::after {
-  width: 100%;
+#icon {
+  width: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+#icon:hover {
+  transform: rotate(20deg) scale(1.1);
 }
 
+/* ---------- HEADER TEXT ---------- */
 .header-text {
   margin-top: 20%;
   font-size: 30px;
@@ -74,13 +99,39 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span {
-  color: #ff004f;
+  color: var(--accent-color);
 }
 
-/* -------------------- ABOUT -------------------- */
+/* ---------- HERO IMAGE ANIMATION ---------- */
+.img-box {
+  width: 45%;
+  height: 80%;
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+}
+
+.img-box img {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: bottom 1s, left 1s;
+}
+
+.img-box:hover .back-img {
+  bottom: 40px;
+}
+
+.img-box:hover .main-img {
+  left: 54%;
+}
+
+/* ---------- ABOUT ---------- */
 #about {
   padding: 80px 0;
-  color: #ababab;
+  color: var(--secondary-color);
 }
 
 .row {
@@ -105,7 +156,7 @@ nav ul li a:hover::after {
 .sub-title {
   font-size: 60px;
   font-weight: 600;
-  color: #fff;
+  color: var(--secondary-color);
 }
 
 .tab-titles {
@@ -125,7 +176,7 @@ nav ul li a:hover::after {
   content: '';
   width: 0;
   height: 3px;
-  background: #ff004f;
+  background: var(--accent-color);
   position: absolute;
   left: 0;
   bottom: -8px;
@@ -142,7 +193,7 @@ nav ul li a:hover::after {
 }
 
 .tab-contents ul li span {
-  color: #b54769;
+  color: var(--accent-color);
   font-size: 14px;
 }
 
@@ -154,9 +205,9 @@ nav ul li a:hover::after {
   display: block;
 }
 
-/* -------------------- SERVICES -------------------- */
+/* ---------- SERVICES ---------- */
 #services {
-  padding: 30px 0;
+  padding: 50px 0;
 }
 
 .services-list {
@@ -168,12 +219,14 @@ nav ul li a:hover::after {
 }
 
 .services-list div {
-  background: #262626;
+  background: var(--card-bg);
   padding: 40px;
   font-size: 13px;
   font-weight: 300;
   border-radius: 10px;
-  transition: background 0.5s, transform 0.5s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: background 0.5s, transform 0.5s, color 0.5s;
+  color: var(--secondary-color);
 }
 
 .services-list div i {
@@ -182,6 +235,7 @@ nav ul li a:hover::after {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--accent-color);
 }
 
 .services-list div h2 {
@@ -191,23 +245,21 @@ nav ul li a:hover::after {
 }
 
 .services-list div p {
-  line-height: 16px;
-}
-
-.services-list div a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 12px;
-  margin-top: 20px;
-  display: inline-block;
+  line-height: 20px;
+  color: var(--secondary-color);
 }
 
 .services-list div:hover {
-  background-color: #ff004f;
+  background-color: var(--accent-color);
+  color: #fff;
   transform: translateY(-10px);
 }
 
-/* -------------------- PORTFOLIO -------------------- */
+.services-list div:hover i {
+  color: #fff;
+}
+
+/* ---------- PORTFOLIO ---------- */
 #portfolio {
   padding: 50px 0;
 }
@@ -235,7 +287,7 @@ nav ul li a:hover::after {
 .layer {
   width: 100%;
   height: 0;
-  background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+  background: var(--layer-bg);
   border-radius: 10px;
   position: absolute;
   left: 0;
@@ -249,6 +301,7 @@ nav ul li a:hover::after {
   text-align: center;
   font-size: 14px;
   transition: height 0.5s;
+  color: #fff;
 }
 
 .layer h3 {
@@ -258,7 +311,7 @@ nav ul li a:hover::after {
 
 .layer a {
   margin-top: 20px;
-  color: #ff004f;
+  color: var(--accent-color);
   text-decoration: none;
   font-size: 18px;
   line-height: 60px;
@@ -281,26 +334,28 @@ nav ul li a:hover::after {
   display: block;
   margin: 50px auto;
   width: fit-content;
-  border: 1px solid #ff004f;
+  border: 1px solid var(--accent-color);
   padding: 14px 50px;
   border-radius: 6px;
   text-decoration: none;
-  color: #fff;
-  transition: background 0.5s;
+  color: var(--secondary-color);
+  transition: background 0.5s, color 0.5s;
 }
 
 .btn:hover {
-  background: #ff004f;
+  background: var(--accent-color);
+  color: #fff;
 }
 
-/* -------------------- CONTACT -------------------- */
+/* ---------- CONTACT ---------- */
 #contact {
-  background: linear-gradient(145deg, #0a0a0a 0%, #150a0d 100%);
-  color: #fff;
+  background: var(--primary-color);
+  color: var(--secondary-color);
   padding: 70px 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background 0.5s, color 0.5s;
 }
 
 .contact-container {
@@ -326,7 +381,7 @@ nav ul li a:hover::after {
 .contact-left .sub-title {
   font-size: 48px;
   font-weight: 600;
-  color: #fff;
+  color: var(--secondary-color);
   margin-bottom: 20px;
   display: flex;
   align-items: center;
@@ -334,7 +389,7 @@ nav ul li a:hover::after {
 }
 
 .contact-left .sub-title i {
-  color: #ff004f;
+  color: var(--accent-color);
   font-size: 38px;
   transition: 0.3s ease;
 }
@@ -345,19 +400,19 @@ nav ul li a:hover::after {
 
 .contact-desc {
   font-size: 16px;
-  color: #b3b3b3;
+  color: var(--secondary-color);
   line-height: 1.6;
   margin-bottom: 30px;
 }
 
 .contact-details p {
   font-size: 16px;
-  color: #d0d0d0;
+  color: var(--secondary-color);
   margin: 10px 0;
 }
 
 .contact-details i {
-  color: #ff004f;
+  color: var(--accent-color);
   margin-right: 10px;
 }
 
@@ -365,33 +420,19 @@ nav ul li a:hover::after {
 .social-icons {
   margin-top: 25px;
   display: flex;
-  gap: 20px;
-
+  gap: 10px;
 }
 
 .social-icons a {
   text-decoration: none;
-  font-size: 30px;
-  color: #b3b3b3;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: 0.3s ease;
-}
-
-.social-icons a span {
-  font-size: 16px;
-  color: #b3b3b3;
+  font-size: 25px;
+  color: var(--secondary-color);
   transition: 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #ff004f;
+  color: var(--accent-color);
   transform: translateY(-5px);
-}
-
-.social-icons a:hover span {
-  color: #ff004f;
 }
 
 /* RIGHT CARD */
@@ -400,10 +441,11 @@ nav ul li a:hover::after {
   min-width: 300px;
   display: flex;
   justify-content: center;
+  
 }
 
 .contact-card {
-  background: rgba(255, 0, 79, 0.05);
+  background: rgba(255, 0, 79, 0.1);
   border: 1px solid rgba(255, 0, 79, 0.15);
   border-radius: 20px;
   padding: 60px 50px;
@@ -411,6 +453,7 @@ nav ul li a:hover::after {
   width: 100%;
   max-width: 480px;
   transition: all 0.3s ease;
+  color: var(--secondary-color);
 }
 
 .contact-card:hover {
@@ -426,16 +469,16 @@ nav ul li a:hover::after {
 
 .contact-card p {
   font-size: 16px;
-  color: #b3b3b3;
+  color: var(--secondary-color);
   line-height: 1.6;
 }
 
 /* Download CV Button */
 .btn-card {
   margin-top: 30px;
-  border: 2px solid #ff004f;
+  border: 2px solid var(--accent-color);
   background: transparent;
-  color: #fff;
+  color: var(--secondary-color);
   font-weight: 500;
   padding: 12px 38px;
   border-radius: 8px;
@@ -447,13 +490,14 @@ nav ul li a:hover::after {
 }
 
 .btn-card i {
-  color: #ff004f;
+  color: var(--accent-color);
   font-size: 18px;
   transition: color 0.3s ease;
 }
 
 .btn-card:hover {
-  background: #ff004f;
+  background: var(--accent-color);
+  color: #fff;
   transform: scale(1.05);
 }
 
@@ -461,7 +505,7 @@ nav ul li a:hover::after {
   color: #fff;
 }
 
-/* -------------------- RESPONSIVE -------------------- */
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 900px) {
   .contact-container {
     flex-direction: column;
@@ -476,5 +520,9 @@ nav ul li a:hover::after {
 
   .sub-title {
     font-size: 36px;
+  }
+
+  .img-box {
+    display: none;
   }
 }

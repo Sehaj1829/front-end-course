@@ -1,204 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Sehaj Khosla</title>
-    <link rel="stylesheet" href="style.css" >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Sehaj Khosla</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
 </head>
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="images/logo.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-text">
-                <p>Software Engineer</p>
-                <h1>Hi. I'm <span>Sehaj</span><br>Khosla from India</h1>
-            </div>
-        </div>
-    </div>
-    <!-- ......................About -->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1"><img src="images/about_img.jpg" class=""></div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo quidem amet sapiente quae distinctio autem, ad ullam eligendi sed enim, non soluta, dolor odio velit. Ut, fugit. Quis, dolores ab?</p>
+  <!-- HEADER SECTION -->
+  <div id="header">
+    <div class="container header-container">
+      <nav>
+        <img src="images/dark_logo.jpg" id="logo" />
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <img src="images/sun.png" id="icon" />
+      </nav>
 
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>UI?UX</span><br>Designing Web/App Interfaces</li>
-                            <li><span>Web Development</span><br>Web app Development</li>
-                            <li><span>App Development</span><br>Building Android/IOS apps</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>2021 - Current</span><br>UI/UX Design Training at ET Institute</li>
-                            <li><span>2019 - 2021</span><br>Team Lead at StarApp LLC.</li>
-                            <li><span>2017 - 2019</span><br>UI/UX Design Exceutive at Coin Digital Ltd.</li>
-                            <li><span>2016 - 2017</span><br>Internship at ekart eCommerce.</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2016</span><br>UI/UX Design Training at ET Institute</li>
-                            <li><span>2016</span><br>MBA from MIT Banglore</li>
-                            <li><span>2014</span><br>BBA from ISM Banglore</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ******* Services ****** -->
-    <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Design</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed porro impedit modi consequatur esse iure! Suscipit unde provident accusantium laboriosam.</p>
-                    <a href="#">learn more</a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-crop-simple"></i>
-                    <h2>UI/UX Design</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed porro impedit modi consequatur esse iure! Suscipit unde provident accusantium laboriosam.</p>
-                    <a href="#">learn more</a>
-                </div>
-                <div>
-                    <i class="fa-brands fa-app-store"></i>
-                    <h2>App Design</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed porro impedit modi consequatur esse iure! Suscipit unde provident accusantium laboriosam.</p>
-                    <a href="#">learn more</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ******* portfolio ****** -->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="images/work-1.png">
-                    <div class="layer">
-                        <h3>Social Media App</h3>
-                        <p>The app connects you to the talented people around the world.
-                        Download it from the play store.</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/work-2.png">
-                    <div class="layer">
-                        <h3>Music App</h3>
-                        <p>The app connects you to the talented people around the world.
-                        Download it from the play store.</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/work-3.png">
-                    <div class="layer">
-                        <h3>Online Shopping App</h3>
-                        <p>The app connects you to the talented people around the world.
-                        Download it from the play store.</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="btn">See More</a>
-        </div>
-    </div>
-
-    <!-- Contact -->
-
-    <section id="contact">
-    <div class="contact-container">
-    <!-- LEFT SIDE -->
-    <div class="contact-left">
-      <h1 class="sub-title"><i class="fa-solid fa-paper-plane"></i> Let’s Connect</h1>
-      <p class="contact-desc">
-        Whether you have a project in mind, want to collaborate, or just want to say hi — feel free to reach out.
-        I'm always open to new opportunities.
-      </p>
-
-      <div class="contact-details">
-        <p><i class="fa-solid fa-envelope"></i> sehajkhosla@example.com</p>
-        <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+      <div class="header-text">
+        <p>Software Developer</p>
+        <h1>Hi. I'm <span>Sehaj</span><br />Khosla from India</h1>
       </div>
 
-      <div class="social-icons">
-        <a href="https://github.com/Sehaj1829" target="_blank" class="social-link">
-          <i class="fa-brands fa-github"></i><span>GitHub</span>
-        </a>
-        <a href="https://www.linkedin.com/in/sehaj-khosla-b873aa179/" target="_blank" class="social-link">
-          <i class="fa-brands fa-linkedin"></i><span>LinkedIn</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- RIGHT SIDE CARD -->
-    <div class="contact-right">
-      <div class="contact-card">
-        <h2>Always Learning,<br>Always Building</h2>
-        <p>
-          I’m constantly exploring new technologies and love working on projects that push my boundaries.
-        </p>
-        <a href="Files/Resume_Sehaj Khosla.pdf" download class="btn btn-card">
-          <i class="fa-solid fa-download"></i> Download CV
-        </a>
+      <!-- Hero Image with Hover Animation -->
+      <div class="img-box">
+        <img src="images/pattern.png" class="back-img" />
+        <img src="images/background1.png" class="main-img" />
       </div>
     </div>
   </div>
-</section>
 
+  <!-- ABOUT -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/about_img.jpg" />
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>
+            Enthusiastic and detail-oriented Computer Science student with hands-on experience
+            in software development and web technologies. Proficient in Java, C++, and HTML.
+            Strong problem-solving and communication skills with a passion for building efficient
+            and innovative software solutions.
+          </p>
 
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">
+              Positions of Responsibilities
+            </p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
 
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li>
+                <span>Programming Languages</span><br />C, C++, Java, Python, HTML, CSS, JavaScript
+              </li>
+              <li><span>Web Technologies</span><br />Frontend & Backend Web Development</li>
+              <li><span>Tools & Frameworks</span><br />PyQt6, Git, VS Code</li>
+              <li><span>Soft Skills</span><br />Problem-Solving, Communication, Leadership</li>
+            </ul>
+          </div>
 
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li>
+                <span>2023 - 2024</span><br />Media Executive - Bits n Bytes Club | Chitkara University
+              </li>
+              <li>
+                <span>2022 - 2023</span><br />Media Executive - Coding Ninjas Club | Chitkara University
+              </li>
+              <li><span>2022</span><br />Developed “Metadata Analyser Tool” (Python GUI Project)</li>
+            </ul>
+          </div>
 
+          <div class="tab-contents" id="education">
+            <ul>
+              <li>
+                <span>2021 – 2025</span><br />Bachelor of Engineering in Computer Science<br />Chitkara
+                University, Rajpura<br />CGPA: 8.76
+              </li>
+              <li>
+                <span>2020 – 2021</span><br />Class 12 – Sri Guru Gobind Sr. Sec School, Chandigarh<br />Percentage:
+                75%
+              </li>
+              <li>
+                <span>2018 – 2019</span><br />Class 10 – Vivek High School, Mohali<br />Percentage: 84%
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- SERVICES -->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Web Development</h2>
+          <p>
+            Designing and developing modern, responsive web applications using HTML, CSS,
+            JavaScript, and frameworks for efficient user experiences.
+          </p>
+        </div>
+        <div>
+          <i class="fa-solid fa-laptop-code"></i>
+          <h2>Software Engineering</h2>
+          <p>
+            Building scalable and optimized software solutions with a focus on clean
+            architecture, maintainability, and performance.
+          </p>
+        </div>
+        <div>
+          <i class="fa-solid fa-layer-group"></i>
+          <h2>Full Stack Development</h2>
+          <p>
+            Creating end-to-end applications integrating frontend, backend, and database layers
+            for seamless performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- PORTFOLIO -->
+  <div id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">My Work</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="images/work-1.png" />
+          <div class="layer">
+            <h3>Myntra Working Clone</h3>
+            <p>
+              A fully functional clone of the Myntra e-commerce platform built using modern web
+              technologies.
+            </p>
+            <a href="https://github.com/Sehaj1829/Myntra-Clone" target="_blank"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/work-2.png" />
+          <div class="layer">
+            <h3>Text to Voice Converter</h3>
+            <p>
+              A web-based app that converts text input into natural-sounding speech using
+              JavaScript and Web Speech API.
+            </p>
+            <a href="https://github.com/Sehaj1829/Text-to-Voice-Converter" target="_blank"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+        </div>
+        <div class="work">
+          <img src="images/work-3.png" />
+          <div class="layer">
+            <h3>Image Search Engine</h3>
+            <p>
+              A responsive image search app powered by the Unsplash API delivering real-time
+              results.
+            </p>
+            <a href="https://github.com/Sehaj1829/Image-Search-Engine" target="_blank"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <a href="https://github.com/Sehaj1829" target="_blank" class="btn">See More</a>
+    </div>
+  </div>
 
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-container">
+      <div class="contact-left">
+        <h1 class="sub-title">
+          <i class="fa-solid fa-paper-plane"></i> Let’s Connect
+        </h1>
+        <p class="contact-desc">
+          Whether you have a project in mind, want to collaborate, or just want to say hi —
+          feel free to reach out. I'm always open to new opportunities.
+        </p>
+        <div class="contact-details">
+          <p><i class="fa-solid fa-envelope"></i> sehajpalkhosla@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i> +91 77103 77676</p>
+        </div>
+        <div class="social-icons">
+          <a href="https://github.com/Sehaj1829" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          >GitHub</a>
+          <a
+            href="https://www.linkedin.com/in/sehaj-khosla-b873aa179/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          >Linkedin</a>
+        </div>
+      </div>
 
+      <div class="contact-right">
+        <div class="contact-card">
+          <h2>Always Learning,<br />Always Building</h2>
+          <p>
+            I’m constantly exploring new technologies and love working on projects that push my
+            boundaries.
+          </p>
+          <a href="Files/Resume_Sehaj Khosla.pdf" download class="btn btn-card"
+            ><i class="fa-solid fa-download"></i> Download CV</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
+  <script>
+    // Tab switcher
+    const tablinks = document.getElementsByClassName("tab-links");
+    const tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname) 
+    {
+      for (let tablink of tablinks) tablink.classList.remove("active-link");
+      for (let tabcontent of tabcontents) tabcontent.classList.remove("active-tab");
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
 
-        function opentab(tabname)
+    // Theme toggle
+    const icon = document.getElementById("icon");
+    const logo = document.getElementById("logo")
+    icon.addEventListener("click", function () 
+    {
+        document.body.classList.toggle("light-theme");
+        if(document.body.classList.contains("light-theme"))
         {
-            for(tablink of tablinks)
-            {
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents)
-            {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
+            icon.src = "images/moon.png";
+            logo.src = "images/light_logo.jpg";
+            
+        } 
+        else 
+        {
+            icon.src = "images/sun.png";
+            logo.src = "images/dark_logo.jpg";
+            
         }
-    </script>
+    });
+  </script>
 </body>
 </html>
