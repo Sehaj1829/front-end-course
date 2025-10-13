@@ -361,7 +361,8 @@ nav ul li a:hover {
   height: 100%;
 }
 
-.btn {
+.btn 
+{
   display: block;
   margin: 50px auto;
   width: fit-content;
@@ -476,8 +477,8 @@ nav ul li a:hover {
 }
 
 .contact-card {
-  background: rgba(255, 0, 79, 0.1);
-  border: 1px solid rgba(255, 0, 79, 0.15);
+  background: rgba(255, 0, 79, 0.15);
+  border: 1px solid rgba(255, 0, 79, 0.15); 
   border-radius: 20px;
   padding: 60px 50px;
   text-align: center;
@@ -488,7 +489,7 @@ nav ul li a:hover {
 }
 
 .contact-card:hover {
-  background: rgba(255, 0, 79, 0.1);
+  background: rgba(255, 0, 79, 0.22);
   transform: translateY(-5px);
 }
 
